@@ -250,7 +250,7 @@ p {
 
 #projects .project-item:hover {
     box-shadow: -10px 10px 20px crimson;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 #projects .project-info {
@@ -261,7 +261,7 @@ p {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(60deg, rgb(25, 25, 25), rgb(50, 50, 50));
+    background-image: linear-gradient(60deg, rgb(25, 25, 25), rgb(70, 70, 70));
     color: white;
 }
 
@@ -271,9 +271,8 @@ p {
 }
 
 #projects .project-info h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
-    margin-top: 10px;
 }
 
 #projects .project-info p {
@@ -284,6 +283,27 @@ p {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
+    position: relative;
+    scale: 1.02;
+}
+
+#projects .project-img:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, rgb(25, 25, 25), rgb(70, 70, 70));
+    opacity: .45;
+}
+
+#projects .project-img img {
+    transition: .3s ease transform;
+}
+
+#projects .project-item:hover .project-img img {
+    transform: scale(1.1);
 }
 
 /* End Projects Section */
