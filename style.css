@@ -155,7 +155,12 @@ p {
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px;
+    padding: 100px 0;
+}
+
+#about-me .about-top p {
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #about-me .about-bottom {
@@ -245,11 +250,12 @@ p {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: -5px 5px 10px crimson;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
-#projects .project-item:hover {
-    box-shadow: -0px 10px 20px crimson;
+#projects .project-item:hover,
+#projects .project-item:focus {
+    box-shadow: -10px 10px 20px crimson;
     transition: 0.3s ease;
 }
 
