@@ -332,7 +332,7 @@ p {
 
 #contact .contact-item:hover {
     box-shadow: 0px 0px 25px 0 var(--color-theme);
-    transform: rotate(-5deg);
+    transform: rotate(-3deg);
 }
 
 #contact .icon {
