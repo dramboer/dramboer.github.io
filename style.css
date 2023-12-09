@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
 :root {
-    --color-theme: rgb(1, 123, 223);
+    --color-theme-blue: rgb(1, 123, 223);
+    --color-theme-green: rgb(43, 161, 43);
+    --color-theme-red: rgb(201, 0, 0);
+    --color-theme: var(--color-theme-blue);
 }
 
 * {
@@ -70,6 +73,7 @@ p {
     margin-top: 30px;
     transition: .3s ease;
     transition-property: background-color, color;
+    text-align: center;
 }
 
 .cta:hover {
@@ -332,8 +336,8 @@ p {
 }
 
 #about .col-right h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 600;
     letter-spacing: .2rem;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -341,6 +345,8 @@ p {
 
 #about .col-right p {
     margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.7rem;
 }
 
 #about .col-right .cta {
@@ -375,76 +381,10 @@ p {
 /* End About Section */
 
 
-/* Services Section */
-
-#services-me .services {
-    flex-direction: column;
-    text-align: center;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 100px 0;
-}
-
-#services-me .services-top p {
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-#services-me .services-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
-#services-me .services-item {
-    flex-basis: 80%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-    border-radius: 15px;
-    background-image: url(img/item-bg.jpg);
-    background-size: cover;
-    margin: 10px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-}
-
-#services-me .services-item::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    opacity: .7;
-    z-index: -1;
-}
-
-#services-me .services-bottom .icon {
-    height: 80px;
-    width: 80px;
-    margin-bottom: 20px;
-}
-
-#services-me .services-item h2 {
-    font-size: 2rem;
-    color: var(--color-theme);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-#services-me .services-item p {
-    text-align: left;
-}
+/* Education Section */
 
 
-/* End Services Section */
+/* End Education Section */
 
 /* Contact Section */
 
@@ -548,7 +488,7 @@ p {
 }
 
 #projects .project-info {
-    padding: 30px;
+    padding: 0 30px;
     flex-basis: 50%;
     height: 100%;
     display: flex;
@@ -560,8 +500,11 @@ p {
 }
 
 #projects .project-info h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 500;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
 }
 
 #projects .project-info h2 {
@@ -582,20 +525,11 @@ p {
     position: relative;
 }
 
-#projects .project-img:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(60deg, rgb(20, 20, 20), rgb(70, 70, 70));
-    opacity: .3;
-}
-
 #projects .project-img img {
     object-fit: cover;
     transition: .3s ease transform;
+    transform: scale(1.1);
+    filter: brightness(90%);
 }
 
 #projects .project-item:hover .project-img img {
@@ -624,6 +558,10 @@ p {
     letter-spacing: .1rem;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#footer .brand h1 {
+    text-align: center;
 }
 
 #footer .social-icon {
@@ -730,11 +668,13 @@ p {
     }
 
     #projects .project-item {
-        height: 400px;
-        /* margin: 0; */
+        height: 300px;
         width: 100%;
-        /* border-radius: 0; */
         flex-direction: row;
+    }
+
+    #projects .project-info h1 {
+        margin: 0 auto;
     }
 
     /* End Projects */
@@ -833,7 +773,7 @@ p {
         font-size: 1.8rem;
     }
 
-    #header .nav-list ul a:after {
+    #header .nav-list ul a::after {
         display: none;
     }
 
